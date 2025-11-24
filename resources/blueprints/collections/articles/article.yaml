@@ -1,0 +1,122 @@
+title: Article
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: Image
+              width: 50
+          -
+            handle: video
+            field:
+              type: video
+              display: Video
+              width: 50
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+# Additional blueprint enhancements for better functionality
+# These can be added to extend the base blueprint:
+
+# Add these fields to the main tab sections if you want additional content options:
+#       -
+#         handle: excerpt
+#         field:
+#           type: text
+#           display: Excerpt
+#           instructions: 'A brief summary of the article for SEO and previews'
+#           width: 50
+#       -
+#         handle: tags
+#         field:
+#           type: tags
+#           display: Tags
+#           instructions: 'Add relevant tags for categorization and SEO'
+#           width: 50
+
+# Add this to the sidebar if you want categories:
+#       -
+#         handle: category
+#         field:
+#           type: terms
+#           taxonomy: categories
+#           display: Category
+#           max_items: 1
+
+# Add this to the sidebar if you want featured status:
+#       -
+#         handle: featured
+#         field:
+#           type: toggle
+#           display: Featured Article
+#           default: false
+#           instructions: 'Mark this article as featured for special display'
+
+# Add this to the sidebar if you want comments control:
+#       -
+#         handle: enable_comments
+#         field:
+#           type: toggle
+#           display: Enable Comments
+#           default: true
+#           instructions: 'Allow comments on this article'
+
+# Add this to the sidebar if you want social sharing options:
+#       -
+#         handle: social_sharing
+#         field:
+#           type: toggle
+#           display: Enable Social Sharing
+#           default: true
+#           instructions: 'Show social sharing buttons for this article'

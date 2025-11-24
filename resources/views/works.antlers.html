@@ -1,0 +1,734 @@
+
+
+
+   
+    <div class="page-hero">
+        <div class="inside-page-hero">
+            <style>
+                .site {
+                    margin-top: 0
+                }
+
+                .site-header {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    height: 57px;
+                    z-index: 10001;
+                    padding: 5px 10px;
+                    background: var(--blue-transparent)
+                }
+
+                .site-header .inside-header,
+                .site-header .inside-navigation {
+                    max-width: 1200px
+                }
+
+                .site-header.scrolled,
+                #mobile-header.scrolled {
+                    background: var(--blue)
+                }
+
+                .site-header .main-navigation,
+                .site-header .main-navigation .main-nav {
+                    flex-grow: 1
+                }
+
+                .site-header img.header-image.is-logo-image {
+                    width: 120px
+                }
+
+                .site-header .main-navigation .menu-item a {
+                    color: var(--white);
+                    font-weight: var(--font-weight-medium);
+                    transition: var(--transition-default)
+                }
+
+                .site-header .main-navigation .menu-item a:hover {
+                    color: var(--gold)
+                }
+
+                .site-header .main-navigation ul.sub-menu {
+                    background: var(--blue-transparent)
+                }
+
+                .site-header .main-navigation .menu-item-join-button a:hover {
+                    color: var(--white)
+                }
+
+                .site-header .main-navigation .menu-item-join-button a {
+                    background: var(--red);
+                    color: var(--white);
+                    font-size: var(--font-size-large);
+                    border-radius: var(--button-border-radius);
+                    text-transform: uppercase;
+                    font-weight: var(--font-weight-bold);
+                    padding: var(--padding-0) var(--padding-2);
+                    text-transform: none
+                }
+
+                .site-header .main-navigation .menu-item-join-button a:hover {
+                    background: var(--gold)
+                }
+
+                .site-header .main-navigation .menu-item-join-button a span {
+                    .font-weight: var(--font-weight-default)
+                }
+
+                .site-footer {
+                    padding-top: 0
+                }
+
+                .inside-header {
+                    flex-direction: row-reverse
+                }
+
+                .main-navigation .main-nav ul li.menu-item-about-us>a,
+                .main-navigation .main-nav ul li.menu-item-how-it-works>a,
+                .main-navigation .main-nav ul li.menu-item-our-story>a,
+                .main-navigation .main-nav ul li.menu-item-safety>a {
+                    padding: var(--padding-1) var(--padding-3)
+                }
+
+                .main-navigation .main-nav ul li.menu-item-about-us>a {
+                    padding-left: var(--padding-5)
+                }
+
+                @media screen and (max-width:800px) {
+                    .main-navigation .main-nav ul li.menu-item-about-us>a {
+                        padding-left: var(--padding-4)
+                    }
+                }
+
+                .main-navigation .main-nav ul li.menu-item-safety>a {
+                    padding-right: var(--padding-0)
+                }
+
+                .main-navigation .menu-item-has-children .dropdown-menu-toggle {
+                    padding-right: var(--padding-1) !important
+                }
+
+                .main-navigation .main-nav ul li.menu-item-login>a {
+                    padding: var(--padding-1) var(--padding-4)
+                }
+
+                .menu-item-about-us {
+                    order: 1
+                }
+
+                .menu-item-how-it-works {
+                    order: 2
+                }
+
+                .menu-item-our-story {
+                    order: 3
+                }
+
+                .menu-item-safety {
+                    order: 4
+                }
+
+                .menu-item-login {
+                    order: 5;
+                    margin-left: auto
+                }
+
+                .menu-item-join-button {
+                    order: 6
+                }
+
+                .main-navigation .menu-bar-items {
+                    display: none
+                }
+
+                @media only screen and (max-width:910px) and (min-width:769px) {
+                    .site-header {
+                        padding: 5px 10px
+                    }
+
+                    .inside-header {
+                        flex-direction: row-reverse !important
+                    }
+
+                    .site-logo {
+                        margin-bottom: 0 !important
+                    }
+                }
+
+                @media only screen and (max-width:768px) {
+                    #mobile-header {
+                        background: var(--blue-transparent);
+                        position: fixed;
+                        top: 0;
+                        width: 100%;
+                        max-width: 100vw !important;
+                        z-index: 10001
+                    }
+
+                    #mobile-header .gp-icon svg {
+                        height: 30px;
+                        width: 35px
+                    }
+
+                    #mobile-header button.menu-toggle {
+                        order: 1;
+                        line-height: var(--line-height-small);
+                        padding-left: var(--padding-2);
+                        margin-bottom: var(--margin-1)
+                    }
+
+                    #mobile-header .site-logo {
+                        order: 2 !important;
+                        margin-left: 0;
+                        margin-right: auto
+                    }
+
+                    #mobile-header .site-logo img {
+                        width: 124px;
+                        height: 40px;
+                        padding: 0
+                    }
+
+                    #mobile-header .menu-bar-items {
+                        display: flex;
+                        align-items: center;
+                        order: 3;
+                        margin-right: var(--margin-2)
+                    }
+
+                    #mobile-header ul.mobile-menu-bar-items {
+                        display: flex;
+                        align-items: center
+                    }
+
+                    #mobile-header li.mobile-login a {
+                        padding: var(--padding-1) var(--padding-1);
+                        padding-right: var(--padding-4)
+                    }
+
+                    #mobile-header li.mobile-join-button {
+                        background: var(--red);
+                        background: var(--rebel-red);
+                        border-radius: 25px
+                    }
+
+                    #mobile-header li.mobile-join-button a {
+                        color: var(--white);
+                        font-size: var(--font-size-default);
+                        font-weight: var(--font-weight-bold);
+                        text-transform: uppercase;
+                        padding: var(--padding-1) var(--padding-2);
+                        text-transform: none
+                    }
+
+                    #mobile-header li.menu-item-join-button,
+                    #mobile-header li.menu-item-login {
+                        display: none
+                    }
+
+                    #mobile-header.toggled .main-nav li.menu-item-about-us {
+                        padding-top: var(--padding-2)
+                    }
+
+                    #mobile-header.toggled .main-nav li>a {
+                        padding-bottom: var(--padding-2);
+                        padding-top: var(--padding-2)
+                    }
+
+                    #mobile-header .main-nav ul li>a,
+                    #mobile-header .menu-bar-items a {
+                        color: var(--white);
+                        font-size: var(--font-size-default);
+                        font-weight: var(--font-weight-medium);
+                        padding-left: var(--padding-4)
+                    }
+
+                    #mobile-header .main-nav ul.sub-menu li {
+                        padding: var(--padding-0)
+                    }
+
+                    #mobile-header .main-nav ul.sub-menu li>a {
+                        font-size: var(--font-size-default);
+                        font-weight: var(--font-weight-medium);
+                        padding-left: var(--padding-5);
+                        padding-top: var(--padding-3);
+                        padding-bottom: var(--padding-3)
+                    }
+                }
+            </style>
+        </div>
+    </div>
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                <main class="site-main" id="main">
+                    <article id="post-50195" class="post-50195 page type-page status-publish has-post-thumbnail"
+                        itemtype="https://schema.org/CreativeWork" itemscope>
+                        <div class="inside-article">
+                            <div class="entry-content" itemprop="text">
+                                <style>
+                                    .statistics-columns>.wp-block-column:not(:last-child) {
+                                        border-right: 1px solid #cda780
+                                    }
+
+                                    .footer-swap.lazyloaded {
+                                        background-image: url(https://media.seeking.com/uploads/2023/10/how-it-works-footer3-desktop.jpg)
+                                    }
+
+                                    @media screen and (max-width:950px) {
+                                        .tags-image {
+                                            background-position: right
+                                        }
+                                    }
+
+                                    @media screen and (max-width:781px) {
+                                        .statistics-columns>.wp-block-column:not(:last-child) {
+                                            margin-left: 10%;
+                                            margin-right: 10%;
+                                            border-bottom: 1px solid #cda780;
+                                            border-right: 0
+                                        }
+                                    }
+
+                                    @media screen and (max-width:768px) {
+                                        .hero-swap {
+                                            background-image: url(https://media.seeking.com/uploads/2023/10/how-it-works-hero3-tablet.jpg);
+                                            min-height: 0
+                                        }
+
+                                        .hero-spacer-top {
+                                            height: 400px !important
+                                        }
+
+                                        .hero-spacer-bottom {
+                                            height: 50px !important
+                                        }
+
+                                        .footer-swap.lazyloaded {
+                                            background-image: url(https://media.seeking.com/uploads/2023/10/how-it-works-footer3-tablet.jpg);
+                                            background-position: top right
+                                        }
+
+                                        .footer-spacer-top {
+                                            height: 300px !important
+                                        }
+                                    }
+
+                                    @media screen and (max-width:432px) {
+                                        .hero-swap {
+                                            background-image: url(https://media.seeking.com/uploads/2023/10/how-it-works-hero3-mobile.jpg) !important
+                                        }
+
+                                        .hero-spacer-bottom {
+                                            height: 50px !important
+                                        }
+
+                                        .footer-swap.lazyloaded {
+                                            background-image: url(https://media.seeking.com/uploads/2023/10/how-it-works-footer3-mobile.jpg)
+                                        }
+                                    }
+                                </style>
+                                <div class="gb-container gb-container-5d5c4f88 rb-2 how-it-works top-level-container">
+                                    <div class="gb-container gb-container-ec410c5b second-level-container">
+                                        <div
+                                            class="gb-container gb-container-2c5b729c hero-container hero-swap fade fade-to-blue">
+                                            <div style="height:350px" aria-hidden="true"
+                                                class="wp-block-spacer hero-spacer-top"></div>
+                                            <div class="gb-container gb-container-1e78dad5 overlay blue">
+                                                <h1 class="wp-block-heading" id="h-how-seeking-works">How Seeking Works
+                                                </h1>
+                                                <p class="fc-white last-p">Seeking is a community that celebrates the
+                                                    pursuit of exceptional connections. Our platform empowers
+                                                    success-minded individuals to embrace their desires and foster
+                                                    meaningful relationships rooted in intention, authenticity, and
+                                                    honesty.</p>
+                                                <p class="fc-white last-p">You know what you want.
+                                                    Find&nbsp;it&nbsp;on&nbsp;Seeking.™</p>
+                                            </div>
+                                            <div style="height:48px" aria-hidden="true"
+                                                class="wp-block-spacer hero-spacer-bottom"></div>
+                                            <div class="gb-container gb-container-f9d72ae8 hero-button-container"> <a
+                                                    class="gb-button gb-button-3cad06f7 gb-button-text join-button vce vce-aboveFold-joinNow"
+                                                    href="https://members.seeking.com/join"><span>Join</span>&nbsp;Now</a>
+                                            </div>
+                                            <div style="height:20px" aria-hidden="true"
+                                                class="wp-block-spacer hero-spacer-bottom"></div>
+                                        </div>
+                                        <div class="gb-container gb-container-c8efa139 py-6">
+                                            <div class="gb-container gb-container-e5cb9a32 getting-started-container">
+                                                <h2 class="wp-block-heading has-text-align-center mb-6"
+                                                    id="h-getting-started-on-seeking">Getting Started <span>On
+                                                        Seeking</span></h2>
+                                                <div class="gb-container gb-container-03adf520 px-3">
+                                                    <figure class="wp-block-image size-full mb-5"><img
+                                                            fetchpriority="high" decoding="async" width="700"
+                                                            height="700"
+                                                            src="https://media.seeking.com/uploads/2025/06/getting-started-on-seeking.jpg"
+                                                            alt="Someone signing up for seeking using their mobile phone"
+                                                            class="wp-image-62991" /></figure>
+                                                </div>
+                                                <div class="gb-container gb-container-7374cfff mb-6">
+                                                    <h3 class="wp-block-heading mb-3 fc-black" id="h-sign-up"><em>Sign
+                                                            Up</em></h3>
+                                                    <p>Congratulations! You’re about to join a community that celebrates
+                                                        ambition and the pursuit of the extraordinary. At Seeking, every
+                                                        connection is an opportunity to meet someone who shares your
+                                                        drive and refined taste. This is your moment!</p>
+                                                    <div
+                                                        class="gb-container gb-container-9f92af49 default-join-button-container px-3">
+                                                        <a class="gb-button gb-button-c1b8d7b0 gb-button-text join-button vce vce-belowFold-joinNow"
+                                                            href="https://members.seeking.com/join">Sign Up Now</a>
+                                                    </div>
+                                                </div>
+                                                <div class="gb-container gb-container-e3bf47f5 mb-6">
+                                                    <h3 class="wp-block-heading mb-3 fc-black"
+                                                        id="h-upload-a-photo-and-get-verified"><em>Upload a Photo and
+                                                            Get Verified</em></h3>
+                                                    <p>Simply snap a selfie to unlock your profile. Seeking prioritizes
+                                                        authenticity because no one wants to waste time talking to
+                                                        someone who isn’t real. Our Selfie Liveness Check combats fraud
+                                                        and fake profiles by validating new members through secure
+                                                        verification. Your Selfie Verification badge tells everyone that
+                                                        you&#8217;re on Seeking for the right reasons.</p>
+                                                    <p><a href="https://blog.seeking.com/how-seeking-com-selfie-verification-makes-online-dating-safer"
+                                                            target="_blank" rel="noreferrer noopener">How Selfie
+                                                            Verification on Seeking makes dating safer</a></p>
+                                                </div>
+                                                <div class="gb-container gb-container-e7bc3f9c mb-6">
+                                                    <h3 class="wp-block-heading mb-3 fc-black"
+                                                        id="h-complete-your-profile"><em>Complete Your Profile</em></h3>
+                                                    <p>Fill out each section of your profile, taking care to highlight
+                                                        your personality, preferences, and lifestyle standards. These
+                                                        details help attract like-minded individuals. Enhance your
+                                                        appeal by adding extra photos. A genuine, complete profile
+                                                        builds trust, gets attention, and sets you apart. This increases
+                                                        your chances of being noticed and receiving more messages.</p>
+                                                    <p><a href="https://blog.seeking.com/crafting-the-ultimate-seeking-profile"
+                                                            target="_blank" rel="noreferrer noopener">Crafting the
+                                                            ultimate Seeking profile</a></p>
+                                                </div>
+                                                <div class="gb-container gb-container-2c40d197 mb-6">
+                                                    <h3 class="wp-block-heading mb-3 fc-black"
+                                                        id="h-connect-with-quality-partners"><em>Connect With Quality
+                                                            Partners</em></h3>
+                                                    <p>After your profile has been approved, you’ll be able to connect
+                                                        with other members. We’ve streamlined the dating pool by
+                                                        focusing on cultivating a community built on success and
+                                                        ambition so you can date confidently knowing that the caliber of
+                                                        your potential connections surpasses ordinary encounters.</p>
+                                                    <p><a href="https://members.seeking.com/search" target="_blank"
+                                                            rel="noreferrer noopener nofollow">Search for a quality
+                                                            partner on Seeking</a></p>
+                                                </div>
+                                                <div class="gb-container gb-container-8429d161 mb-6">
+                                                    <h3 class="wp-block-heading mb-3 fc-black" id="h-send-messages">
+                                                        <em>Send Messages</em></h3>
+                                                    <p>Upgrade to Premium or Diamond and begin sending messages. Seeking
+                                                        has thoughtfully curated a community centered around
+                                                        accomplishment and appreciation for the best. So message
+                                                        confidently, knowing that the quality of potential connections
+                                                        goes well beyond the ordinary.</p>
+                                                    <p><a href="https://members.seeking.com/billing/memberships"
+                                                            target="_blank" rel="noreferrer noopener nofollow">Upgrade
+                                                            to Seeking Premium</a></p>
+                                                </div>
+                                                <div class="gb-container gb-container-d480d701 mb-6">
+                                                    <h3 class="wp-block-heading mb-3 fc-black"
+                                                        id="h-find-what-you-want"><em>Find What You Want</em></h3>
+                                                    <p>On Seeking, luxury is the standard. Whether it&#8217;s
+                                                        first-class dates or partnerships built on shared ambition,
+                                                        every connection is intentional and extraordinary. You’re not
+                                                        here for maybe. You’re here for more.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="gb-container gb-container-049eef3b footer-swap lazyload fade fade-to-blue">
+                                            <div class="gb-container gb-container-181aa702 px-3">
+                                                <div style="height:300px" aria-hidden="true"
+                                                    class="wp-block-spacer footer-spacer-top"></div>
+                                                <h2 class="wp-block-heading fc-white proxima fs-h3 mb-5"
+                                                    id="h-you-know-what-you-want-find-it-on-seeking">You know what you
+                                                    want. <br>Find it on Seeking.</h2>
+                                                <div
+                                                    class="gb-container gb-container-b66926f6 default-join-button-container">
+                                                    <a class="gb-button gb-button-070715cc gb-button-text join-button mt-2 mb-5 vce vce-belowFold-joinNow"
+                                                        href="https://members.seeking.com/join"><span>Join</span>&nbsp;Now</a>
+                                                </div>
+                                                <div class="gb-container gb-container-882afeae">
+                                                    <p class="fw-medium fc-white"><span data-nosnippet="">Seek
+                                                            Responsibly®<br>Must be 18 years or older to
+                                                            join<br><br><strong>Sugar dating and all forms of
+                                                                <br>transactional&nbsp;relationships are strictly
+                                                                prohibited.<br><a
+                                                                    href="https://www.seeking.com/dating-safely#transactional-dating-prohibited"
+                                                                    target="_blank"
+                                                                    rel="noreferrer noopener nofollow"><u>Click to learn
+                                                                        more.</u></a></strong></span>
+                                                </div>
+                                                <div style="height:100px" aria-hidden="true" class="wp-block-spacer">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </main>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer">
+        <div id="footer-widgets" class="site footer-widgets">
+            <div class="footer-widgets-container grid-container">
+                <div class="inside-footer-widgets">
+                    <div class="footer-widget-1">
+                        <aside id="icl_lang_sel_widget-3" class="widget inner-padding widget_icl_lang_sel_widget">
+                            <div class="wpml-ls-sidebars-footer-1 wpml-ls wpml-ls-legacy-list-horizontal">
+                                <ul role="menu">
+                                    <li class="wpml-ls-slot-footer-1 wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-list-horizontal"
+                                        role="none"> <a href="https://www.seeking.com/how-it-works" class="wpml-ls-link"
+                                            role="menuitem"> <span class="wpml-ls-native"
+                                                role="menuitem">English</span></a></li>
+                                    <li class="wpml-ls-slot-footer-1 wpml-ls-item wpml-ls-item-es wpml-ls-item-legacy-list-horizontal"
+                                        role="none"> <a href="https://www.seeking.com/es/como-funciona"
+                                            class="wpml-ls-link" role="menuitem" aria-label="Switch to Español"
+                                            title="Switch to Español"> <span class="wpml-ls-native"
+                                                lang="es">Español</span></a></li>
+                                    <li class="wpml-ls-slot-footer-1 wpml-ls-item wpml-ls-item-fr wpml-ls-item-legacy-list-horizontal"
+                                        role="none"> <a href="https://www.seeking.com/fr/comment-ca-marche"
+                                            class="wpml-ls-link" role="menuitem" aria-label="Switch to Français"
+                                            title="Switch to Français"> <span class="wpml-ls-native"
+                                                lang="fr">Français</span></a></li>
+                                    <li class="wpml-ls-slot-footer-1 wpml-ls-item wpml-ls-item-de wpml-ls-item-legacy-list-horizontal"
+                                        role="none"> <a href="https://www.seeking.com/de/wie-es-funktioniert"
+                                            class="wpml-ls-link" role="menuitem" aria-label="Switch to Deutsch"
+                                            title="Switch to Deutsch"> <span class="wpml-ls-native"
+                                                lang="de">Deutsch</span></a></li>
+                                    <li class="wpml-ls-slot-footer-1 wpml-ls-item wpml-ls-item-zh wpml-ls-item-legacy-list-horizontal"
+                                        role="none"> <a
+                                            href="https://www.seeking.com/zh/%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8"
+                                            class="wpml-ls-link" role="menuitem" aria-label="Switch to 中文(简)"
+                                            title="Switch to 中文(简)"> <span class="wpml-ls-native"
+                                                lang="zh">中文(简)</span></a></li>
+                                    <li class="wpml-ls-slot-footer-1 wpml-ls-item wpml-ls-item-nl wpml-ls-item-legacy-list-horizontal"
+                                        role="none"> <a href="https://www.seeking.com/nl/hoe-het-werkt"
+                                            class="wpml-ls-link" role="menuitem" aria-label="Switch to Nederlands"
+                                            title="Switch to Nederlands"> <span class="wpml-ls-native"
+                                                lang="nl">Nederlands</span></a></li>
+                                    <li class="wpml-ls-slot-footer-1 wpml-ls-item wpml-ls-item-pt wpml-ls-item-legacy-list-horizontal"
+                                        role="none"> <a href="https://www.seeking.com/pt/como-funciona"
+                                            class="wpml-ls-link" role="menuitem" aria-label="Switch to Português"
+                                            title="Switch to Português"> <span class="wpml-ls-native"
+                                                lang="pt">Português</span></a></li>
+                                    <li class="wpml-ls-slot-footer-1 wpml-ls-item wpml-ls-item-ja wpml-ls-last-item wpml-ls-item-legacy-list-horizontal"
+                                        role="none"> <a href="https://www.seeking.com/ja/%e4%bb%95%e7%b5%84%e3%81%bf"
+                                            class="wpml-ls-link" role="menuitem" aria-label="Switch to 日本語"
+                                            title="Switch to 日本語"> <span class="wpml-ls-native" lang="ja">日本語</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gb-container gb-container-0242db19 top-level-container footer">
+            <div class="gb-container gb-container-602a1cfa second-level-container pa-4">
+                <div class="gb-container gb-container-4299faae footer-content">
+                    <div style="height:24px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <div
+                        class="wp-block-columns mb-0 is-layout-flex wp-container-core-columns-is-layout-9d6595d7 wp-block-columns-is-layout-flex">
+                        <div class="wp-block-column footer-column-1 is-layout-flow wp-block-column-is-layout-flow">
+                            <div class="gb-container gb-container-7140f7df footer-column-1-content">
+                                <div class="gb-container gb-container-652f6409 mb-4 pr-5 tag-line-container">
+                                    <div
+                                        class="wp-block-columns is-not-stacked-on-mobile gap-1 mb-0 is-layout-flex wp-container-core-columns-is-layout-9d6595d7 wp-block-columns-is-layout-flex">
+                                        <div class="wp-block-column is-vertically-aligned-top is-layout-flow wp-block-column-is-layout-flow"
+                                            style="flex-basis:50px">
+                                            <figure class="wp-block-image size-full is-resized vce vce-footer-logo">
+                                                <noscript><img decoding="async"
+                                                        src="https://media.seeking.com/uploads/2023/11/seeking-icon-tm-50.svg"
+                                                        alt="Seeking Icon" class="wp-image-62265"
+                                                        style="object-fit:cover;width:50px;height:50px" /></noscript><img
+                                                    decoding="async"
+                                                    src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
+                                                    data-src="https://media.seeking.com/uploads/2023/11/seeking-icon-tm-50.svg"
+                                                    alt="Seeking Icon" class="lazyload wp-image-62265"
+                                                    style="object-fit:cover;width:50px;height:50px" /></figure>
+                                        </div>
+                                        <div
+                                            class="wp-block-column is-vertically-aligned-top is-layout-flow wp-block-column-is-layout-flow">
+                                            <p class="mb-0">Seeking.com is a luxury dating site focused on creating
+                                                exceptional connections. Join millions of members worldwide finding
+                                                meaningful relationships.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gb-container gb-container-9dc14438 mb-4 social-icon-container"> <span
+                                        data-nosnippet="">
+                                        <figure class="wp-block-image size-full vce vce-footer-facebookIcon"><a
+                                                href="https://www.facebook.com/seekingofficial" target="_blank"
+                                                rel="noopener"><noscript><img decoding="async" width="20" height="20"
+                                                        src="https://media.seeking.com/uploads/2022/01/facebook-logo-black.png"
+                                                        alt="Facebook Logo" class="wp-image-51015" /></noscript><img
+                                                    decoding="async" width="20" height="20"
+                                                    src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2020%2020%22%3E%3C/svg%3E'
+                                                    data-src="https://media.seeking.com/uploads/2022/01/facebook-logo-black.png"
+                                                    alt="Facebook Logo" class="lazyload wp-image-51015" /></a></figure>
+                                        <figure
+                                            class="wp-block-image size-full is-resized vce vce-footer-instagramIcon"><a
+                                                href="https://www.instagram.com/seekingofficial" target="_blank"
+                                                rel="noopener"><noscript><img decoding="async" width="20" height="20"
+                                                        src="https://media.seeking.com/uploads/2022/01/instagram-logo-black.png"
+                                                        alt="Instagram Logo" class="wp-image-51016"
+                                                        style="width:20px;height:auto" /></noscript><img
+                                                    decoding="async" width="20" height="20"
+                                                    src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2020%2020%22%3E%3C/svg%3E'
+                                                    data-src="https://media.seeking.com/uploads/2022/01/instagram-logo-black.png"
+                                                    alt="Instagram Logo" class="lazyload wp-image-51016"
+                                                    style="width:20px;height:auto" /></a></figure>
+                                        <figure class="wp-block-image size-full vce vce-footer-youtubeIcon"><a
+                                                href="https://www.youtube.com/@seeking_official" target="_blank"
+                                                rel="noopener"><noscript><img decoding="async" width="20" height="20"
+                                                        src="https://media.seeking.com/uploads/2022/01/youtube-icon-black.png"
+                                                        alt="Youtube Logo" class="wp-image-51019" /></noscript><img
+                                                    decoding="async" width="20" height="20"
+                                                    src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2020%2020%22%3E%3C/svg%3E'
+                                                    data-src="https://media.seeking.com/uploads/2022/01/youtube-icon-black.png"
+                                                    alt="Youtube Logo" class="lazyload wp-image-51019" /></a></figure>
+                                        <figure class="wp-block-image size-full is-resized"><a
+                                                href="https://www.tiktok.com/@officialseeking" target="_blank"
+                                                rel="noopener"><noscript><img decoding="async" width="17" height="20"
+                                                        src="https://media.seeking.com/uploads/2023/12/tik-tok-logo-black.png"
+                                                        alt="Tik Tok Logo" class="wp-image-55135"
+                                                        style="width:20px;height:auto" /></noscript><img
+                                                    decoding="async" width="17" height="20"
+                                                    src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2017%2020%22%3E%3C/svg%3E'
+                                                    data-src="https://media.seeking.com/uploads/2023/12/tik-tok-logo-black.png"
+                                                    alt="Tik Tok Logo" class="lazyload wp-image-55135"
+                                                    style="width:20px;height:auto" /></a></figure>
+                                        <figure class="wp-block-image size-full"><a
+                                                href="https://www.pinterest.com/seekingofficial"
+                                                target="_blank"><noscript><img decoding="async" width="20" height="20"
+                                                        src="https://media.seeking.com/uploads/2023/11/pinterest-logo-black-1.png"
+                                                        alt="Pinterest" class="wp-image-62216" /></noscript><img
+                                                    decoding="async" width="20" height="20"
+                                                    src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2020%2020%22%3E%3C/svg%3E'
+                                                    data-src="https://media.seeking.com/uploads/2023/11/pinterest-logo-black-1.png"
+                                                    alt="Pinterest" class="lazyload wp-image-62216" /></a></figure>
+                                        <figure class="wp-block-image size-full vce vce-footer-twitterIcon"><a
+                                                href="https://twitter.com/seeking" target="_blank"
+                                                rel="noopener"><noscript><img decoding="async" width="20" height="20"
+                                                        src="https://media.seeking.com/uploads/2023/11/x-logo-black.png"
+                                                        alt="X Icon" class="wp-image-55110" /></noscript><img
+                                                    decoding="async" width="20" height="20"
+                                                    src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2020%2020%22%3E%3C/svg%3E'
+                                                    data-src="https://media.seeking.com/uploads/2023/11/x-logo-black.png"
+                                                    alt="X Icon" class="lazyload wp-image-55110" /></a></figure>
+                                    </span></div>
+                                <div class="gb-container gb-container-5d97d3f4 mb-4 google-play-container">
+                                    <figure class="wp-block-image size-full vce vce-footer-downloadOnGoogle lazyload"><a
+                                            href="https://app.appsflyer.com/com.infostream.seekingarrangement?pid=beta-website&amp;c=banner"
+                                            target="_blank" rel="noreferrer noopener"><noscript><img decoding="async"
+                                                    width="168" height="50"
+                                                    src="https://media.seeking.com/uploads/2023/11/download-app-google.png"
+                                                    alt="Get It On Google Play" /></noscript><img decoding="async"
+                                                width="168" height="50"
+                                                src="https://media.seeking.com/uploads/2023/11/download-app-google.png"
+                                                data-src="https://media.seeking.com/uploads/2023/11/download-app-google.png"
+                                                alt="Get It On Google Play"></a></figure>
+                                </div>
+                                <figure class="wp-block-image size-full noshow"><noscript><img decoding="async"
+                                            width="168" height="50"
+                                            src="https://media.seeking.com/uploads/2023/11/download-app-google.png"
+                                            alt="" class="wp-image-51005" /></noscript><img decoding="async" width="168"
+                                        height="50"
+                                        src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20168%2050%22%3E%3C/svg%3E'
+                                        data-src="https://media.seeking.com/uploads/2023/11/download-app-google.png"
+                                        alt="" class="lazyload wp-image-51005" /></figure>
+                                <div class="gb-container gb-container-dcaddf99 legal-container">
+                                    <p class="fw-bold"><span data-nosnippet="">MEMBERS OF SEEKING ARE NOT SUBJECT TO
+                                            MANDATORY BACKGROUND SCREENINGS BUT HAVE THE OPTION TO SUBMIT FOR A
+                                            BACKGROUND CHECK AND/OR ID VERIFICATION.</span></p>
+                                    <p class="fs-legal">© 2025 Seeking.com in conjunction with W8 Tech Limited, W8tech
+                                        Cyprus Limited, and its related companies.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wp-block-column footer-column-2 is-layout-flow wp-block-column-is-layout-flow"
+                            style="flex-basis:175px">
+                            <div class="gb-container gb-container-ea80ece0"> <span data-nosnippet>
+                                    <p class="fs-large">Our Company</p>
+                                    <div class="menu-footer-menu1-container">
+                                        <ul id="menu-footer-menu1" class="menu">
+                                            <li id="menu-item-50232"
+                                                class="vce vce-footerLink-aboutUs menu-item menu-item-type-post_type menu-item-object-page menu-item-50232">
+                                                <a href="https://www.seeking.com/about-us">About Us</a></li>
+                                            <li id="menu-item-13879"
+                                                class="vce vce-footerLink-support menu-item menu-item-type-post_type menu-item-object-page menu-item-13879">
+                                                <a href="https://www.seeking.com/help">Support</a></li>
+                                            <li id="menu-item-50182"
+                                                class="vce vce-footerLink-pressAndMedia menu-item menu-item-type-post_type menu-item-object-page menu-item-50182">
+                                                <a href="https://www.seeking.com/press">Press &#038; Media</a></li>
+                                            <li id="menu-item-58924"
+                                                class="vce vce-footerLink-jobs menu-item menu-item-type-post_type menu-item-object-page menu-item-58924">
+                                                <a href="https://www.seeking.com/jobs">Jobs</a></li>
+                                            <li id="menu-item-13381"
+                                                class="vce vce-footerLink-contactUs menu-item menu-item-type-post_type menu-item-object-page menu-item-13381">
+                                                <a href="https://www.seeking.com/contact">Contact Us</a></li>
+                                            <li id="menu-item-60732"
+                                                class="donotshow menu-item menu-item-type-post_type menu-item-object-page menu-item-60732">
+                                                <a href="https://www.seeking.com/help/ticket">Contact Support</a></li>
+                                            <li id="menu-item-59786"
+                                                class="vce vce-footerLink-privacy menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-59786">
+                                                <a rel="privacy-policy"
+                                                    href="https://www.seeking.com/privacy">Privacy</a></li>
+                                            <li id="menu-item-59785"
+                                                class="vce vce-footerLink-terms menu-item menu-item-type-post_type menu-item-object-page menu-item-59785">
+                                                <a href="https://www.seeking.com/terms">Terms</a></li>
+                                            <li id="menu-item-59787"
+                                                class="vce vce-footerLink-termseu menu-item menu-item-type-post_type menu-item-object-page menu-item-59787">
+                                                <a href="https://www.seeking.com/terms-eu">Terms (EU)</a></li>
+                                        </ul>
+                                    </div>
+                                </span></div>
+                        </div>
+                        <div class="wp-block-column footer-column-3 is-layout-flow wp-block-column-is-layout-flow"
+                            style="flex-basis:200px">
+                            <div class="gb-container gb-container-0777e635"> <span data-nosnippet>
+                                    <p class="fs-large"><a href="/luxury-dating">Luxury Dating</a></p>
+                                    <div class="menu-footer-menu2-container">
+                                        <ul id="menu-footer-menu2" class="menu">
+                                            <li id="menu-item-15092"
+                                                class="vce vce-footerLink-signUpFree menu-item menu-item-type-custom menu-item-object-custom menu-item-15092">
+                                                <a href="https://members.seeking.com/join">Sign Up Free</a></li>
+                                            <li id="menu-item-67475"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67475">
+                                                <a href="https://www.seeking.com/app">Download the Seeking App</a></li>
+                                            <li id="menu-item-14575"
+                                                class="vce vce-footerLink-seekingBlog menu-item menu-item-type-custom menu-item-object-custom menu-item-14575">
+                                                <a href="https://blog.seeking.com">Seeking Blog</a></li>
+                                            <li id="menu-item-66336"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66336">
+                                                <a href="https://www.seeking.com/dating-scenes">Dating Scenes</a></li>
+                                            <li id="menu-item-66337"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66337">
+                                                <a href="https://www.seeking.com/glossary">Glossary</a></li>
+                                            <li id="menu-item-60597"
+                                                class="vce vce-footerLink-memberTestimonials menu-item menu-item-type-post_type menu-item-object-page menu-item-60597">
+                                                <a href="https://www.seeking.com/seeking-member-testimonials">Member
+                                                    Testimonials</a></li>
+                                            <li id="menu-item-65878"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65878">
+                                                <a href="https://www.seeking.com/dating-safely">Dating Safely</a></li>
+                                        </ul>
+                                    </div>
+                                </span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       

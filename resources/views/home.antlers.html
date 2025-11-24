@@ -259,31 +259,31 @@
                                 }
 
                                 .homepage .value-image.lazyloaded {
-                                    background-image: url(https://media.seeking.com/uploads/2025/01/worth-bg-v3.png)
+                                    background-image: url(/seeking/images/worth-bg-v3.png)
                                 }
 
                                 .homepage .value-image.connection {
-                                    background-image: url(https://media.seeking.com/uploads/2025/01/connection-bg-v3.png);
+                                    background-image: url(/seeking/images/connection-bg-v3.png);
                                     transition: .8s
                                 }
 
                                 .homepage .value-image.luxury {
-                                    background-image: url(https://media.seeking.com/uploads/2025/01/luxury-bg-v3.png);
+                                    background-image: url(/seeking/images/luxury-bg-v3.png);
                                     transition: .8s
                                 }
 
                                 .homepage .value-image.authenticity {
-                                    background-image: url(https://media.seeking.com/uploads/2025/01/authenticity-bg-v3.png);
+                                    background-image: url(/seeking/images/authenticity-bg-v3.png);
                                     transition: .8s
                                 }
 
                                 .homepage .value-image.worth {
-                                    background-image: url(https://media.seeking.com/uploads/2025/01/worth-bg-v3.png);
+                                    background-image: url(/seeking/images/worth-bg-v3.png);
                                     transition: .8s
                                 }
 
                                 .homepage .value-image.safety {
-                                    background-image: url(https://media.seeking.com/uploads/2025/01/safety-bg-v3.png);
+                                    background-image: url(/seeking/images/safety-bg-v3.png);
                                     transition: .8s
                                 }
 
@@ -298,12 +298,12 @@
                                 }
 
                                 .homepage .bottom-cta.lazyloaded {
-                                    background-image: url(https://media.seeking.com/uploads/2023/09/footer-kiss-desktop.jpg)
+                                    background-image: url(/seeking/images/footer-kiss-desktop.jpg)
                                 }
 
                                 @media screen and (max-width:768px) {
                                     .homepage .bottom-cta.lazyloaded {
-                                        background-image: url(https://media.seeking.com/uploads/2023/09/footer-kiss-tablet.jpg)
+                                        background-image: url(/seeking/images/footer-kiss-tablet.jpg)
                                     }
 
                                     .homepage .footer-top-spacer {
@@ -317,7 +317,7 @@
 
                                 @media screen and (max-width:432px) {
                                     .homepage .bottom-cta.lazyloaded {
-                                        background-image: url(https://media.seeking.com/uploads/2023/09/footer-kiss-mobile.jpg)
+                                        background-image: url(/seeking/images/footer-kiss-mobile.jpg)
                                     }
                                 }
 
@@ -504,7 +504,7 @@
                                     if (windowWidth <= 768)
                                         if (windowWidth > 432) { isTablet = true; tabletVideoFirstLoad = false; tabletVideoPlaying = true; }
                                     if (windowWidth <= 432) { isMobile = true; mobileVideoFirstLoad = false; mobileVideoPlaying = true; }
-                                    const containerId = 'home-header-container'; $(".values-carousel-3").addClass('owl-carousel'); $(".values-carousel-3").owlCarousel({ items: 1, loop: true, nav: false, dots: false, autoplay: true, autoplayTimeout: 7000, smartSpeed: 1500, }); $(".testimonials-carousel").addClass('owl-carousel'); $(".testimonials-carousel").owlCarousel({ items: 3, loop: true, margin: 0, mouseDrag: false, touchDrag: false, autoplay: true, autoplayTimeout: 8000, autoplayHoverPause: true, animateOut: 'fadeOut', animateIn: 'fadeIn', navText: ['<img decoding="async" class="flip" src="https://media.seeking.com/uploads/2023/09/arrow-right-50.png"/>', '<img decoding="async" src="https://media.seeking.com/uploads/2023/09/arrow-right-50.png"/>'], smartSpeed: 1100, nav: false, dots: false, responsive: { 0: { items: 1, }, }, }); var owl = $('.owl-carousel'); owl.owlCarousel(); $('.testimonial-next').click(function () { owl.trigger('next.owl.carousel'); owl.trigger('stop.owl.autoplay'); owl.trigger('play.owl.autoplay'); }); $('.testimonial-prev').click(function () { owl.trigger('prev.owl.carousel'); owl.trigger('stop.owl.autoplay'); owl.trigger('play.owl.autoplay'); }); $('.value-navigation-arrow-right').click(function () { owl.trigger('next.owl.carousel'); owl.trigger('stop.owl.autoplay'); owl.trigger('play.owl.autoplay'); }); $('.value-navigation-arrow-left').click(function () { owl.trigger('prev.owl.carousel'); owl.trigger('stop.owl.autoplay'); owl.trigger('play.owl.autoplay'); });
+                                    const containerId = 'home-header-container'; $(".values-carousel-3").addClass('owl-carousel'); $(".values-carousel-3").owlCarousel({ items: 1, loop: true, nav: false, dots: false, autoplay: true, autoplayTimeout: 7000, smartSpeed: 1500, }); $(".testimonials-carousel").addClass('owl-carousel'); $(".testimonials-carousel").owlCarousel({ items: 3, loop: true, margin: 0, mouseDrag: false, touchDrag: false, autoplay: true, autoplayTimeout: 8000, autoplayHoverPause: true, animateOut: 'fadeOut', animateIn: 'fadeIn', navText: ['<img decoding="async" class="flip" src="/seeking/images/arrow-right-50.png"/>', '<img decoding="async" src="/seeking/images/arrow-right-50.png"/>'], smartSpeed: 1100, nav: false, dots: false, responsive: { 0: { items: 1, }, }, }); var owl = $('.owl-carousel'); owl.owlCarousel(); $('.testimonial-next').click(function () { owl.trigger('next.owl.carousel'); owl.trigger('stop.owl.autoplay'); owl.trigger('play.owl.autoplay'); }); $('.testimonial-prev').click(function () { owl.trigger('prev.owl.carousel'); owl.trigger('stop.owl.autoplay'); owl.trigger('play.owl.autoplay'); }); $('.value-navigation-arrow-right').click(function () { owl.trigger('next.owl.carousel'); owl.trigger('stop.owl.autoplay'); owl.trigger('play.owl.autoplay'); }); $('.value-navigation-arrow-left').click(function () { owl.trigger('prev.owl.carousel'); owl.trigger('stop.owl.autoplay'); owl.trigger('play.owl.autoplay'); });
                                 }); $(window).resize(function () {
                                     const containerId = 'home-header-container'; var windowWidth = window.innerWidth; if (windowWidth > 768)
                                         if (!isDesktop) {
@@ -549,7 +549,7 @@
                                         }
                                     var docViewTop = $(window).scrollTop(); var docViewBottom = docViewTop + $(window).height(); var handsTop = $('.hand-left').offset().top; var handsBottom = handsTop + $('.hand-left').height() - 50; if (handsBottom <= docViewBottom) { if (handsTop >= docViewTop) { if (hands == false) { hands = true; $('.hand-left').animate({ "margin-left": "0", "opacity": "1" }, 1500); $('.hand-right').animate({ "margin-right": "0", "opacity": "1" }, 1500); } } }
                                     var valuesTop = $('.luxury-container').offset().top; var valuesBottom = valuesTop + $('.luxury-container').height(); if (valuesBottom <= docViewBottom) { if (valuesTop >= docViewTop) { if (values == false) { values = true; $('.worth-container').delay(1000).click(); } } }
-                                    let worthAutoClick = true; $('.values').one("mouseenter", function () { let imageArray = ['https://media.seeking.com/uploads/2025/01/safety-bg-v3.png', 'https://media.seeking.com/uploads/2025/01/connection-bg-v3.png', 'https://media.seeking.com/uploads/2025/01/authenticity-bg-v3.png', 'https://media.seeking.com/uploads/2025/01/luxury-bg-v3.png']; $(imageArray).each(function () { (new Image()).src = this; }); }); $('.connection-container').click(function () {
+                                    let worthAutoClick = true; $('.values').one("mouseenter", function () { let imageArray = ['/seeking/images/safety-bg-v3.png', '/seeking/images/connection-bg-v3.png', '/seeking/images/authenticity-bg-v3.png', '/seeking/images/luxury-bg-v3.png']; $(imageArray).each(function () { (new Image()).src = this; }); }); $('.connection-container').click(function () {
                                         if ($(this).hasClass('active')) { }
                                         else { $('.value-container').removeClass('active'); $(this).addClass('active'); $('.value-details').slideUp(); $('.connection-details').slideDown(); $('.value-image').removeClass("luxury authenticity worth safety"); $('.value-image').addClass("connection"); vysionEvent('showValue-connection', 'click'); }
                                     }); $('.luxury-container').click(function () {
@@ -571,16 +571,39 @@
                                 }); window.addEventListener('resize', () => { document.documentElement.style.height = window.innerHeight + 'px'; });</script>
                             <div class="gb-container gb-container-224cdb89 top-level-container homepage">
                                 <div class="gb-container gb-container-a98542ff second-level-container">
+                                    
+                                    
+                                    <div class="gb-container gb-container-75d56c40 hero-swap fade fade-to-black">
+                                        <div style="height:125px" aria-hidden="true" class="wp-block-spacer"></div>
+                                        <div class="gb-container gb-container-d4f0e052 overlay">
+                                            <h1 class="wp-block-heading has-text-align-center fs-h2 has-white-color has-text-color"
+                                                id="h-dating-safely">Dating Safely</h1>
+                                            <p class="has-text-align-center fs-large">How To Date Safely and
+                                                Respectfully</p>
+                                            <p class="has-text-align-center fs-large fw-bold">LEARN MORE</p>
+                                            <div class="wp-block-image">
+                                                <figure class="aligncenter size-large"><noscript><img
+                                                            decoding="async" width="25" height="13"
+                                                            src="https://media.seeking.com/uploads/2021/11/hero-continue.svg"
+                                                            alt="" class="wp-image-1836" /></noscript><img
+                                                        decoding="async" width="25" height="13"
+                                                        src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2025%2013%22%3E%3C/svg%3E'
+                                                        data-src="https://media.seeking.com/uploads/2021/11/hero-continue.svg"
+                                                        alt="" class="lazyload wp-image-1836" /></figure>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
                                     <div class="gb-container gb-container-05a83b97 home-header-container"
                                         id="home-header-container">
                                         <div class="gb-container gb-container-1afe62d7">
                                             <figure class="wp-block-video m-0 desktop laptop"><video id="desktopVideo"
                                                     class="lazy-video" oncontextmenu="return false;" playsinline=""
-                                                    autoplay="" loop="" muted=""
-                                                    poster="https://media.seeking.com/uploads/2025/03/home-hero-poster-v3.jpg"
+                                                    autoplay="true" loop="" muted=""
+                                                    poster="/seeking/images/home-hero-poster-v3.jpg"
                                                     preload="none">
                                                     <source id="videoMP4"
-                                                        data-src="https://contents.seeking.com/videos/home-hero-desktop-nt.mp4"
+                                                        data-src="/seeking/videos/home-hero-desktop-nt.mp4"
                                                         type="video/mp4">
                                                 </video></figure>
                                         </div>
@@ -588,10 +611,10 @@
                                             <figure class="wp-block-video m-0 tablet"><video id="tabletVideo"
                                                     class="lazy-video" oncontextmenu="return false;" playsinline=""
                                                     autoplay="" muted=""
-                                                    poster="https://media.seeking.com/uploads/2025/03/home-hero-tablet-poster.jpg"
+                                                    poster="/seeking/images/home-hero-tablet-poster.jpg"
                                                     loop="" preload="none">
                                                     <source id="videoMP4"
-                                                        data-src="https://contents.seeking.com/videos/home-hero-tablet-nt.mp4"
+                                                        data-src="/seeking/videos/home-hero-tablet-nt.mp4"
                                                         type="video/mp4">
                                                 </video></figure>
                                         </div>
@@ -599,12 +622,12 @@
                                             <figure class="wp-block-video m-0 mobile"><video id="mobileVideo"
                                                     class="lazyloaded" oncontextmenu="return false;" playsinline=""
                                                     autoplay="" muted=""
-                                                    poster="https://media.seeking.com/uploads/2025/03/home-hero-mobile-poster-v2.jpg"
+                                                    poster="/seeking/images/home-hero-mobile-poster-v2.jpg"
                                                     loop="" preload="none">
                                                     <source id="videoMP4"
-                                                        data-src="https://contents.seeking.com/videos/home-hero-mobile-nt.mp4"
+                                                        data-src="/seeking/videos/home-hero-mobile-nt.mp4"
                                                         type="video/mp4"
-                                                        src="https://contents.seeking.com/videos/home-hero-mobile-nt.mp4">
+                                                        src="/seeking/videos/home-hero-mobile-nt.mp4">
                                                 </video></figure>
                                         </div>
                                         <div class="gb-container gb-container-3725a3a0 hero-content-container">
@@ -614,21 +637,23 @@
                                                 <div class="wp-block-image hero-content-logo">
                                                     <!-- <figure class="aligncenter size-large is-resized"><noscript><img
                                                                 decoding="async"
-                                                                src="https://media.seeking.com/uploads/2025/01/seeking-logo-2025-white.svg"
+                                                                src="/seeking/images/seeking-logo-2025-white.svg"
                                                                 alt="Seeking" class="wp-image-60893"
                                                                 style="width:500px" /></noscript><img decoding="async"
-                                                            src="https://media.seeking.com/uploads/2025/01/seeking-logo-2025-white.svg"
-                                                            data-src="https://media.seeking.com/uploads/2025/01/seeking-logo-2025-white.svg"
+                                                            src="/seeking/images/seeking-logo-2025-white.svg"
+                                                            data-src="/seeking/images/seeking-logo-2025-white.svg"
                                                             alt="Seeking" class="wp-image-60893 ls-is-cached lazyloaded"
                                                             style="width:500px"></figure> -->
                                                 </div>
                                             </div>
                                             <div class="gb-container gb-container-f9d72ae8 hero-button-container"> <a
                                                     class="gb-button gb-button-3cad06f7 gb-button-text hero-button join-button vce vce-aboveFold-joinNow"
-                                                    href="https://members.seeking.com/join"><span>Join</span>&nbsp;Now</a>
+                                                    href="https://members.rosecoco.co.ke.com"><span>Join</span>&nbsp;Now</a>
                                             </div>
                                         </div>
                                     </div>
+
+
                                     <div class="gb-container gb-container-ebdc1bb7">
                                         <div class="gb-container gb-container-d2e27252 hands-container">
                                             <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
@@ -645,7 +670,7 @@
                                                             style="opacity: 1; margin-left: 0px;"><img
                                                                 fetchpriority="high" decoding="async" width="653"
                                                                 height="390"
-                                                                src="https://media.seeking.com/uploads/2023/09/hand-left-desktop.png"
+                                                                src="/seeking/images/hand-left-desktop.png"
                                                                 alt="Hand Reaching Out to Partner"
                                                                 class="wp-image-49052"></figure>
                                                     </div>
@@ -661,7 +686,7 @@
                                                         <div
                                                             class="gb-container gb-container-b66926f6 default-join-button-container">
                                                             <a class="gb-button gb-button-070715cc gb-button-text join-button mt-2 mb-5 vce vce-belowFold-joinNow"
-                                                                href="https://members.seeking.com/join"><span>Join</span>&nbsp;Now</a>
+                                                                href="https://members.rosecoco.co.ke.com/join"><span>Join</span>&nbsp;Now</a>
                                                         </div>
                                                         <div class="gb-container gb-container-882afeae">
                                                             <p class="fw-medium"><span data-nosnippet="">Connect
@@ -677,12 +702,12 @@
                                                         <figure class="wp-block-image size-full hand-right"
                                                             style="opacity: 1; margin-right: 0px;"><noscript><img
                                                                     decoding="async" width="666" height="397"
-                                                                    src="https://media.seeking.com/uploads/2023/09/hand-right-desktop.png"
+                                                                    src="/seeking/images/hand-right-desktop.png"
                                                                     alt="Hand Reaching Out to Partner"
                                                                     class="wp-image-49054" /></noscript><img
                                                                 decoding="async" width="666" height="397"
-                                                                src="https://media.seeking.com/uploads/2023/09/hand-right-desktop.png"
-                                                                data-src="https://media.seeking.com/uploads/2023/09/hand-right-desktop.png"
+                                                                src="/seeking/images/hand-right-desktop.png"
+                                                                data-src="/seeking/images/hand-right-desktop.png"
                                                                 alt="Hand Reaching Out to Partner"
                                                                 class="wp-image-49054 ls-is-cached lazyloaded"></figure>
                                                     </div>

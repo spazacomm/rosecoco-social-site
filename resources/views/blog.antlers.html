@@ -14,10 +14,17 @@
     <div class="row">
         <!-- Main Content -->
         <div class="col-lg-8">
+            {{ collection:articles  status:is="published"  paginate="5" as="articles" }}
+
             <div id="blogContainer">
 
                 <!-- Blog Posts -->
-                {{ collection:articles paginate="true" limit="5" }}
+                
+
+                {{ if no_results }}
+                    <p>Aww, there are no results.</p>
+                {{ /if }}
+                
                 {{articles}}
                 <article class="blog-card card mb-4 shadow-sm">
                     <div class="position-relative">
@@ -51,35 +58,42 @@
                         </a>
                     </div>
                 </article>
-                {{/articles}}
-                {{ /collection:articles }}
+            {{/articles}}
+          
+               
 
             </div>
 
             <!-- Pagination -->
+
+            {{ paginate}}
             <nav aria-label="Blog pagination" class="mt-5">
-                {{ collection:articles paginate="true" limit="5" }}
+                
                 <ul class="pagination justify-content-center">
-                    {{ if prev_page_url }}
+                    {{ if prev_page }}
                     <li class="page-item">
-                        <a class="page-link" href="{{ prev_page_url }}" aria-label="Previous">&laquo;</a>
+                        <a class="page-link" href="{{ prev_page }}" aria-label="Previous">&laquo;</a>
                     </li>
                     {{ /if }}
 
-                    {{ pagination }}
+                    
                         <li class="page-item {{ if active }}active{{ /if }}">
-                            <a class="page-link" href="{{ url }}">{{ number }}</a>
+                            <a class="page-link" href="{{ current_page }}">{{ current_page }}</a>
                         </li>
-                    {{ /pagination }}
+                   
 
-                    {{ if next_page_url }}
+                    {{ if next_page }}
                     <li class="page-item">
-                        <a class="page-link" href="{{ next_page_url }}" aria-label="Next">&raquo;</a>
+                        <a class="page-link" href="{{ next_page }}" aria-label="Next">&raquo;</a>
                     </li>
                     {{ /if }}
                 </ul>
-                {{ /collection:articles }}
+                
             </nav>
+
+            {{ /paginate }}
+
+            {{ /collection:articles }}
         </div>
 
         <!-- Sidebar -->
